@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="device-width, initial-scale=1">
+	<title>add2numbers</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<p style="font-size: 50px;padding-left: 0.5em;padding-top: 0.5em;">Add 2 numbers</p>
+		<div class="calc">
+			<center>
+				<input type="text" size="5" placeholder="0"/>
+					<p>+</p>
+				<input type="text" size="5" placeholder="0"/>
+				<br><br>
+				<button>=</button>
+				<br><br>
+				<input type="text" size="5" readonly/>
+			</center>
+		</div>
+
+	</div>
+
+	
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCXwSspsW5O5_60BF6EFDLrcd8xvA5hIlo",
+	    authDomain: "ainurrahmat-6c746.firebaseapp.com",
+	    databaseURL: "https://ainurrahmat-6c746.firebaseio.com",
+	    projectId: "ainurrahmat-6c746",
+	    storageBucket: "ainurrahmat-6c746.appspot.com",
+	    messagingSenderId: "63376851222"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script type="text/javascript" src="add2numbers.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-colors">
+	<title>Ainur Rahmat | MWS</title>
+	<link rel="stylesheet" type="text/css" href="project3/style.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 500px)" href="project3/icon.css">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+				<img src="images/One_piece.png">
+		</div>
+		<div class="sidebar" style="">
+			<center>
+				<img src="images/profil.jpg">
+			</center>
+			<p>Ainur Rahmat</p>
+		</div>
+		<div class="konten">
+			<a href="project1/add2numbers.html">Add2numbers</a>
+		</div>
+		<div class="konten">
+			<a href="project2/index.html">Mapbox</a>
+		</div>
+		<div class="konten">
+			<a href="index.html">CSS-grid</a>
+		</div>
+		<div class="footer">
+			<center>Ainur Rahmat</center>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		if ('serviceWorker' in navigator){
+			window.addEventListener('load', function(){
+				navigator.serviceWorker.register('/sw.js').then(function(registration) {
+					console.log('service worker registered', registration.scope); 
+				});
+			})
+		}
+	</script>
+	<script type="text/javascript">
+		const messaging = firebase.messaging();
+      		
+	      messaging.requestPermission()
+	      .then(function() {
+	        console.log('Notification permission granted.');
+	        return messaging.getToken();
+	      })
+	      .then(function(token) {
+	        console.log(token);
+	      })
+	      .catch(function(err) {
+	        console.log('Unable to get permission to notify.', err);
+	      })
+    </script>
+</body>
+</html>
